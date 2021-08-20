@@ -21,24 +21,31 @@
                 <div class="mt-5">
                     <h6>Memory</h6>
                     <div class="row  gap-3">
-                        <button type="button" class="btn btn-outline-secondary col-4 p-0">8GB Unifid Memory</button>
-                        <button type="button" class="btn btn-outline-secondary col-4 p-0">16GB Unifid Memory</button>
+                        <button type="button" id="first-memory" class="btn btn-outline-secondary col-4 p-0">8GB Unifid
+                            Memory</button>
+                        <button type="button" id="secound-memory" class="btn btn-outline-secondary col-4 p-0">16GB
+                            Unifid Memory</button>
                     </div>
                 </div>
                 <div class="mt-5">
                     <h6>Storage</h6>
                     <div class="row gap-3 ">
-                        <button type="button" class="btn btn-outline-secondary col p-0">256GB ssd storage</button>
-                        <button type="button" class="btn btn-outline-secondary col p-0">512GB ssd storage</button>
-                        <button type="button" class="btn btn-outline-secondary col p-0">1TB ssd storage</button>
+                        <button type="button" id="first-storage" class="btn btn-outline-secondary col p-0">256GB ssd
+                            storage</button>
+                        <button type="button" id="secound-storage" class="btn btn-outline-secondary col p-0">512GB ssd
+                            storage</button>
+                        <button type="button" id="third-storage" class="btn btn-outline-secondary col p-0">1TB ssd
+                            storage</button>
                     </div>
                 </div>
                 <div class="mt-5">
                     <h6>choose your delivery option</h6>
                     <div class="row  gap-3">
-                        <button type="button" class="btn btn-outline-secondary col p-0">Friday,25 Aug Free
+                        <button type="button" id="first-delivery-option"
+                            class="btn btn-outline-secondary col p-0">Friday,25 Aug Free
                             dalivery</button>
-                        <button type="button" class="btn btn-outline-secondary col p-0">Aug 21 Delivery charge
+                        <button type="button" id="secound-delivery-option" class="btn btn-outline-secondary col p-0">Aug
+                            21 Delivery charge
                             $20</button>
                     </div>
                 </div>
@@ -53,36 +60,36 @@
                                 <tr>
 
                                     <td>Extra memory cost</td>
-                                    <td>$<span>0</span></td>
+                                    <td>$<span id="memory-cost">0</span></td>
                                 </tr>
                                 <tr>
                                     <td>Extra storage cost</td>
-                                    <td>$<span>0</span></td>
+                                    <td>$<span id="storage-cost">0</span></td>
                                 </tr>
 
                                 <tr>
                                     <td>Delivary charge</td>
-                                    <td>$<span>0</span></td>
+                                    <td>$<span id="delivery-charge">0</span></td>
                                 </tr>
 
                                 <tr>
                                     <td>Total Price</td>
-                                    <td>$<span>1299</span></td>
+                                    <td>$<span id="total-price">1299</span></td>
                                 </tr>
                             </tbody>
                         </table>
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label d-block">Add promo code</label>
-                            <input type="text" class="form-control d-inline w-50 " id="formGroupExampleInput"
+                            <input type="text" class="form-control d-inline w-50 " id="promo-code"
                                 placeholder="Example input placeholder">
-                            <button type="button" class="btn btn-danger d-inline w-25 m-2">Apply</button>
+                            <button type="button" id="apply-btn" class="btn btn-danger d-inline w-25 m-2">Apply</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <hr>
-        <h1 class="text-center"> Total: $<span>1299</span></h1>
+        <h1 class="text-center"> Total: $<span id="grant-total">1299</span></h1>
     </section>
 
     <script src="mac.js"></script>
