@@ -22,8 +22,8 @@ function updatedeliveryprice(price) {
     calculteTotal();
 }
 
-function getInputValue(product) {
-    const input = document.getElementById(product)
+function getInputValue(productCost) {
+    const input = document.getElementById(productCost)
     const inputNumber = input.innerText;
     return inputNumber;
 }
@@ -36,6 +36,18 @@ function calculteTotal() {
     console.log(subTotal);
     const totalPriceInput = document.getElementById('total-price').innerText = subTotal;
     grandTotal = document.getElementById('grant-total').innerText = totalPriceInput;
+    document.getElementById('apply-btn').addEventListener('click', function () {
+        const promoInput = document.getElementById('promo-code');
+        const promoCode = promoInput.value;
+        if (promoCode == 'hello') {
+            const promoPrice = subTotal * .8;
+            grandTotal = document.getElementById('grant-total').innerText = promoPrice;
+        }
+        else {
+            console.log('invalid promo');
+        }
+        promoInput.value = '';
+    })
 }
 
 // memory option update
