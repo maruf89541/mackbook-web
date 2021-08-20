@@ -33,14 +33,13 @@ function calculteTotal() {
     const deliveryCharge = getInputValue('delivery-charge')
 
     const subTotal = parseInt(memoryCost) + parseInt(storageCost) + parseInt(deliveryCharge) + 1299;
-    console.log(subTotal);
     const totalPriceInput = document.getElementById('total-price').innerText = subTotal;
     grandTotal = document.getElementById('grant-total').innerText = totalPriceInput;
     document.getElementById('apply-btn').addEventListener('click', function () {
         const promoInput = document.getElementById('promo-code');
         const promoCode = promoInput.value;
         if (promoCode == 'hello') {
-            const promoPrice = subTotal * .8;
+            const promoPrice = grandTotal * .8;
             grandTotal = document.getElementById('grant-total').innerText = promoPrice;
         }
         else {
