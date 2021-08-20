@@ -36,31 +36,32 @@ function calculteTotal() {
     console.log(subTotal);
     const totalPriceInput = document.getElementById('total-price').innerText = subTotal;
     grandTotal = document.getElementById('grant-total').innerText = totalPriceInput;
+}
 
-    // memory option update
-    document.getElementById('first-memory').addEventListener('click', function () {
-        updatepricelist(0);
-    })
-    document.getElementById('secound-memory').addEventListener('click', function () {
-        updatepricelist(180);
-    })
+// memory option update
+document.getElementById('first-memory').addEventListener('click', function () {
+    updatepricelist(0);
+})
+document.getElementById('secound-memory').addEventListener('click', function () {
+    updatepricelist(180);
+})
 
-    // storage option update
-    document.getElementById('first-storage').addEventListener('click', function () {
-        updateStoragepricelist(0);
-    })
-    document.getElementById('secound-storage').addEventListener('click', function () {
-        updateStoragepricelist(100);
-    })
-    document.getElementById('third-storage').addEventListener('click', function () {
-        updateStoragepricelist(180);
-    })
-    // delivery charge add
-    document.getElementById('first-delivery-option').addEventListener('click', function () {
-        updatedeliveryprice(0);
-    })
-    document.getElementById('secound-delivery-option').addEventListener('click', function () {
-        console.log('clicked');
-        updatedeliveryprice(20);
+// storage option update
+document.getElementById('first-storage').addEventListener('click', function () {
+    updateStoragepricelist(0);
+})
+document.getElementById('secound-storage').addEventListener('click', function () {
+    updateStoragepricelist(100);
+})
+document.getElementById('third-storage').addEventListener('click', function () {
+    updateStoragepricelist(180);
+})
+// delivery charge add
+document.getElementById('first-delivery-option').addEventListener('click', function () {
+    updatedeliveryprice(0);
+})
+document.getElementById('secound-delivery-option').addEventListener('click', function () {
+    console.log('clicked');
+    updatedeliveryprice(20);
 
-    })
+})
