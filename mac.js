@@ -1,8 +1,9 @@
 // memory option funtion
 function updatepricelist(price) {
     const extraMemoryInput = document.getElementById('memory-cost');
-    let extraMemoryCost = price;
+    const extraMemoryCost = price;
     extraMemoryInput.innerText = extraMemoryCost;
+    document.getElementById('apply-btn').disabled = false;
     calculteTotal();
 
 }
@@ -10,16 +11,18 @@ function updatepricelist(price) {
 
 function updateStoragepricelist(price) {
     const extraStorageInput = document.getElementById('storage-cost');
-    let extraStorageCost = price;
+    const extraStorageCost = price;
     extraStorageInput.innerText = extraStorageCost;
     calculteTotal();
+    document.getElementById('apply-btn').disabled = false;
 }
 // delivery option function
 function updatedeliveryprice(price) {
     const deliveryChargeInput = document.getElementById('delivery-charge');
-    let deliveryChargeCost = price;
+    const deliveryChargeCost = price;
     deliveryChargeInput.innerText = deliveryChargeCost;
     calculteTotal();
+    document.getElementById('apply-btn').disabled = false;
 }
 
 function getInputValue(productCost) {
@@ -35,23 +38,36 @@ function calculteTotal() {
     const subTotal = parseInt(memoryCost) + parseInt(storageCost) + parseInt(deliveryCharge) + 1299;
     const totalPriceInput = document.getElementById('total-price').innerText = subTotal;
     grandTotal = document.getElementById('grant-total').innerText = totalPriceInput;
-    document.getElementById('apply-btn').addEventListener('click', function () {
-        const promoInput = document.getElementById('promo-code');
-        const promoCode = promoInput.value;
-        if (promoCode == 'hello') {
-            const promoPrice = grandTotal * .8;
-            grandTotal = document.getElementById('grant-total').innerText = promoPrice;
-        }
-        else {
-            console.log('invalid promo');
-        }
-        promoInput.value = '';
-    })
+
 }
+
+function updatePromo() {
+    const promoInput = document.getElementById('promo-code');
+    const promoCode = promoInput.value;
+    if (promoCode == 'stevekaku') {
+        const grandTotalInput = document.getElementById('grant-total');
+        const grandTotal = parseInt(grandTotalInput.innerText);
+        const promoPrice = grandTotal * .8;
+        grandTotalInput.innerText = promoPrice;
+        document.getElementById('apply-btn').disabled = true;
+
+    }
+
+    else {
+        console.log('invalid promo');
+    }
+    promoInput.value = '';
+}
+
+document.getElementById('apply-btn').addEventListener('click', function () {
+    updatePromo();
+
+})
 
 // memory option update
 document.getElementById('first-memory').addEventListener('click', function () {
     updatepricelist(0);
+
 })
 document.getElementById('secound-memory').addEventListener('click', function () {
     updatepricelist(180);
